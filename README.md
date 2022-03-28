@@ -2,11 +2,10 @@
 
 Terraform module which creates VPC resources on AWS.
 
-###Usage
+### Usage
 ```
 module "vpc" {
   name = "test"
   env  = "test"
 }
-
 ```
