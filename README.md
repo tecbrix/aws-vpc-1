@@ -3,9 +3,8 @@ AWS VPC Terraform module
 Terraform module which creates VPC resources on AWS.
 
 Usage
-module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
 
+module "vpc" {
   name = "test"
   env  = "test"
 }
