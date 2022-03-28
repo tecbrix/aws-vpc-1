@@ -1,6 +1,6 @@
 # AWS VPC Terraform module
 
-Terraform module which creates VPC resources on AWS.
+Terraform module which creates VPC resources on AWS. Will create two private and public subnet by default.
 
 ### Usage
 ```
