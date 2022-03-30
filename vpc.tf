@@ -1,3 +1,4 @@
+data "aws_availability_zones" "azs" {}
 #Create the VPC
  resource "aws_vpc" "Main" {                # Creating VPC here
    cidr_block       = var.main_vpc_cidr     # Defining the CIDR block use 10.0.0.0/24 for demo
@@ -13,6 +14,7 @@
  resource "aws_subnet" "publicsubnets" {    # Creating Public Subnets
    count  = length(var.public_subnets)
    vpc_id =  aws_vpc.Main.id
+   availability_zone = data.aws_availability_zones.azs.names[count.index]
    cidr_block = "${var.public_subnets[count.index]}"        # CIDR block of public subnets
    tags = {
       env = var.env
@@ -23,6 +25,7 @@
  resource "aws_subnet" "privatesubnets" {
   count  = length(var.private_subnets)
    vpc_id =  aws_vpc.Main.id
+   availability_zone = data.aws_availability_zones.azs.names[count.index]
    cidr_block = "${var.private_subnets[count.index]}"          # CIDR block of private subnets
    tags = {
       env = var.env
