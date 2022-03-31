@@ -20,5 +20,5 @@ output "vpc_cidr" {
 
 output "vpc_id" {
   description = "vpc id"
-  value       = vpc.Main.id
+  value       = aws_vpc.Main.id
 }
