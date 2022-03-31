@@ -7,3 +7,8 @@ output "aws_db_subnet_group_name" {
   description = "subnet group for  rds"
   value       = aws_db_subnet_group.rds.name
 }
+
+output "pub_subnet_for_ec2" {
+  description = "subnet for ec2"
+  value       = aws_subnet.publicsubnets[0].id
+}

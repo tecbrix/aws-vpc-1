@@ -3,6 +3,7 @@ data "aws_availability_zones" "azs" {}
  resource "aws_vpc" "Main" {                # Creating VPC here
    cidr_block       = var.main_vpc_cidr     # Defining the CIDR block use 10.0.0.0/24 for demo
    instance_tenancy = "default"
+   enable_dns_hostnames = true
    tags             = local.tags
  }
  #Create Internet Gateway and attach it to VPC
