@@ -12,3 +12,8 @@ output "pub_subnet_for_ec2" {
   description = "subnet for ec2"
   value       = aws_subnet.publicsubnets[0].id
 }
+
+output "vpc_cidr" {
+  description = "subnet for ec2"
+  value       = var.main_vpc_cidr
+}
