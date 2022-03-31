@@ -14,6 +14,11 @@ output "pub_subnet_for_ec2" {
 }
 
 output "vpc_cidr" {
-  description = "subnet for ec2"
+  description = "vpc cidr"
   value       = var.main_vpc_cidr
+}
+
+output "vpc_id" {
+  description = "vpc id"
+  value       = vpc.Main.id
 }
