@@ -4,6 +4,12 @@ Terraform module which creates VPC resources on AWS. Will create two private and
 
 ### Usage
 ```
+git clone https://github.com/tecbrix/aws-wordpress.git
+cd aws-wordpress
+terraform apply
+```
+### Usage as module 
+```
 module "vpc" {
   source = "github.com/tecbrix/aws-vpc"
   name = "test"
