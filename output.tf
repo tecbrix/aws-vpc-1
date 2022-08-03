@@ -22,10 +22,12 @@ output "vpc_id" {
   description = "vpc id"
   value       = aws_vpc.Main.id
 }
+
 output "web_sec_id" {
   description = "sec id for ec2"
   value       = aws_security_group.web.id
 }
+
 output "mysql_sec_id" {
   description = "sec id for mysql"
   value       = aws_security_group.mysql.id

@@ -1,4 +1,4 @@
-resource aws_security_group "web" {
+resource "aws_security_group" "web" {
   name        = "${var.name}-webSG"
   description = "This is for ${var.name}s web servers security group"
   vpc_id      = aws_vpc.Main.id
@@ -37,7 +37,7 @@ resource aws_security_group "web" {
 }
 
 
-resource aws_security_group "mysql" {
+resource "aws_security_group" "mysql" {
   name        = "${var.name}-DBSG"
   description = "managed by terrafrom for db servers"
   vpc_id      = aws_vpc.Main.id
