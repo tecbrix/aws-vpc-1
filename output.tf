@@ -15,7 +15,7 @@ output "pub_subnet_for_ec2" {
 
 output "vpc_cidr" {
   description = "vpc cidr"
-  value       = var.main_vpc_cidr
+  value       = aws_vpc.Main.cidr_block
 }
 
 output "vpc_id" {
